@@ -12,7 +12,6 @@ function readBlob(opt_startByte, opt_stopByte) {
 
   var reader = new FileReader();
 
-  // If we use onloadend, we need to check the readyState.
   reader.onloadend = function(evt) {
     if (evt.target.readyState == FileReader.DONE) { // DONE == 2
       document.getElementById('byte_content').textContent = evt.target.result;
